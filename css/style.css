@@ -1,0 +1,106 @@
+@font-face {
+    font-family: font;
+    src: url(../font/Figtree-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font;
+}
+
+body {
+    background-color: hsl(47, 88%, 63%);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.box{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 382px;
+    min-height: 382;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    border: 2px solid #000;
+    box-shadow: 8px 8px #000;
+    padding: 24px;
+    transition: 0.5s;
+}
+
+.container:hover {
+    box-shadow: 16px 16px #000;
+    transform: scale(1.02, 1.02);
+}
+
+.container .icon svg {
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.container .text h1 {
+    background-color: hsl(47, 88%, 63%);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.container .text h1 + span{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.container .text h3 {
+    color: hsl(47, 88%, 63%);
+    font-size: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.container .text p {
+    color: hsl(0, 0%, 50%);
+    margin-bottom: 15px;
+
+}
+
+.container .text .icon-name{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.container .text .icon-name img{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+
+@media print{
+    .container{
+        display: none;
+    }
+    body::after{
+        content: "لا يمكن طباعة الصفحة";
+        font-size: 50px;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
